@@ -1,0 +1,3 @@
+CREATE SCHEMA [Marvel]
+AUTHORIZATION [dbo]
+GO
