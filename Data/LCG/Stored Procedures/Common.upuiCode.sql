@@ -30,12 +30,14 @@ BEGIN
 				   ,[CodeType]
 				   ,[Code]
 				   ,[CodeDescription]
+                   ,[IsDeleted]
 				   ,[UpdatedBy]
 				   ,[UpdatedOn])
 		VALUES (@ivc_Category
 		       ,@ivc_CodeType
 			   ,@ivc_code
 			   ,@ivc_CodeDescription
+               ,0
 			   ,@lvc_UpdatedBy
 			   ,@lvc_UpdatedOn)
 	END ELSE BEGIN
