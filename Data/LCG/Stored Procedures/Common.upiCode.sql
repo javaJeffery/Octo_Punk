@@ -2,7 +2,6 @@ SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_NULLS ON
 GO
-
 -- =============================================
 -- Author:		J. Kirkland
 -- Create date: 2025-02-08
@@ -27,12 +26,14 @@ BEGIN
 			   ,[CodeType]
 			   ,[Code]
 			   ,[CodeDescription]
+               ,[IsDeleted] 
 			   ,[UpdatedBy]
 			   ,[UpdatedOn])
 		SELECT a.Category
 			 , a.CodeType
 			 , a.Code
 			 , a.CodeDescription
+		     , 0
 			 , ISNULL(a.UpdatedBy, 'Earl')
 			 , GETUTCDATE()
 		  FROM @itt_Code a

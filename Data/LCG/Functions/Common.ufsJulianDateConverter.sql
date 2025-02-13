@@ -12,7 +12,7 @@ GO
 CREATE   FUNCTION [Common].[ufsJulianDateConverter] 
 (
 	-- Add the parameters for the function here
-	@GregorianDate Datetime
+	@GregorianDate Datetime2
 )
 RETURNS DECIMAL(14,5)
 AS
